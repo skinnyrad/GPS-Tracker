@@ -6,7 +6,7 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 #
 
 ## Schematic
-![gpstrackerschematic](https://imgur.com/a/APdaO7X)
+![gpstrackerschematic](https://i.imgur.com/oEBkrGV.jpg)
 ## Bill of Materials
 - J: [ESP32-Pico-D4-Module](https://www.amazon.com/RCmall-ESP32-PICO-KIT-Development-ESP32-PICO-D4-Module/dp/B09WDQYDJD?th=1)
 - U: [NEO-6M GPS module](https://www.amazon.com/Microcontroller-Compatible-Sensitivity-Navigation-Positioning/dp/B07P8YMVNT?th=1)
