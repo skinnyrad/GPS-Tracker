@@ -17,17 +17,17 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 
 ## Wiring
 Esp32 Board --- Exterenal Device
-- NEO-6M:
--- TX0 --- RXD
--- RX0 --- TXD
--- 5v --- VCC
--- GND --- GND
-- SparkFun microSD:
--- 19 --- DO
--- 23 --- DI
--- 18 --- SCK
--- 5 --- CS
--- 3V3 --- VCC
--- GND --- GND
+### NEO-6M:
+- TX0 --- RXD
+- RX0 --- TXD
+- 5v --- VCC
+- GND --- GND
+### SparkFun microSD:
+- 19 --- DO
+- 23 --- DI
+- 18 --- SCK
+- 5 --- CS
+- 3V3 --- VCC
+- GND --- GND
 
 
