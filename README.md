@@ -1,5 +1,5 @@
 # GPS-Tracker
----
+
 #
 
 The GPS-Tracker is an extremely simple GPS device that records its current position to a removable micro SD card, where it can then be dumped into a GPS coordinate visualiser.
@@ -14,4 +14,20 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 
 ## Tips For Construction
 - When flashing data onto the ESP32-Pico-D4-Module, make sure that the RX0 and TX0 are not connected to anything.
+
+## Wiring
+Esp32 Board --- Exterenal Device
+- NEO-6M:
+-- TX0 --- RXD
+-- RX0 --- TXD
+-- 5v --- VCC
+-- GND --- GND
+- SparkFun microSD:
+-- 19 --- DO
+-- 23 --- DI
+-- 18 --- SCK
+-- 5 --- CS
+-- 3V3 --- VCC
+-- GND --- GND
+
 
