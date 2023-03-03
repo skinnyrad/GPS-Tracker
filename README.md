@@ -16,13 +16,12 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 - When flashing data onto the ESP32-Pico-D4-Module, make sure that the RX0 and TX0 are not connected to anything.
 
 ## Wiring
-Esp32 Board --- Exterenal Device
-### NEO-6M:
+### ESP32 --- NEO-6M:
 - TX0 --- RXD
 - RX0 --- TXD
 - 5v --- VCC
 - GND --- GND
-### SparkFun microSD:
+### ESP32 --- SparkFun microSD:
 - 19 --- DO
 - 23 --- DI
 - 18 --- SCK
