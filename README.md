@@ -38,5 +38,5 @@ Either search with the Library Manager in Arduino IDE or click the links.
 ## Additional boards manager URLs
 Copy this URL to the corresponding section in preferences.
 - https://dl.espressif.com/dl/package_esp32_index.json
-
+(Make sure to also install this in the Board Manager)
 
