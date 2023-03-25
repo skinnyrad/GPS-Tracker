@@ -11,7 +11,7 @@ static const int RXPin = 3, TXPin = 1;
 static const uint32_t GPSBaud = 9600;
 double previous_location_lat;
 double previous_location_lng;
-String File0;
+String File0 = "Failed"; // The initial state of the file name is "Failed" in order to debug later.
 const char* F;
 // The TinyGPSPlus object
 TinyGPSPlus gps;
@@ -39,6 +39,8 @@ void setup(){
     Serial.begin(19200); // Serial Moniter
     ss.begin(GPSBaud); // GPS  
 
+      Serial.println("Mounting Card...");
+
     if(!SD.begin()){
         Serial.println("Card Mount Failed"); // this either means you need to check the wiring or if the actual SD card isn't there
         return;
@@ -65,9 +67,14 @@ void setup(){
     Serial.printf("Total space: %lluMB\n", SD.totalBytes() / (1024 * 1024));
     Serial.printf("Used space: %lluMB\n", SD.usedBytes() / (1024 * 1024));
    
-    // waiting for GPS to aquire date and time 
-    while(!gps.date.isValid() || !gps.time.isValid()){delay(1000);} // the program will not continue until both date and time are available
     
+
+    /*
+    * // waiting for GPS to aquire date and time (commented out for testing)
+    * while (File0 == "Failed"){
+    * if (gps.encode(ss.read()) && gps.location.isValid() && gps.date.isValid() && gps.time.isValid()){
+    */
+
     // saving current location for weeding out extraneous location data
     previous_location_lat = gps.location.lat(); 
     previous_location_lng = gps.location.lng(); 
@@ -75,16 +82,21 @@ void setup(){
     // naming the file
     File0 = "/GpsData_"+String(gps.date.month())+"_"+String(gps.date.day())+"_"+String(gps.date.year())+"_"+String(gps.time.hour())+".csv";
     F = File0.c_str();
- 
+    
+    // Saving the file name dates for debugging
+    String j = String(gps.date.month())+"_"+String(gps.date.day())+"_"+String(gps.date.year())+"_"+String(gps.time.hour()); 
+    const char* y = j.c_str();
+    appendFile(SD, F,y);
+
     // save data header
     appendFile(SD, F,"Date [mm/dd/yyyy], Time [HH:MM:SS.ZZ], Latitude [deg], Longitude [deg], Speed [kmph]\n");
-    
+  
+    //}
+  //}
 }
 
 void loop(){
-  // exicute code only if there is a SD card detected
-  if(SD.cardType() != CARD_NONE){ 
-
+  
   while (ss.available() > 0){
     if (gps.encode(ss.read()) && gps.location.isValid() && gps.date.isValid() && gps.time.isValid()){
       String data_to_save = ""; // data string for saving
@@ -112,10 +124,3 @@ void loop(){
       delay(100);  // wait one tenth of a sec before looping  
     }
   }
-  }else{delay(1000);// if the SD card is not detected, wait a sec
-    Serial.println("No SD card attached");
-        if(!SD.begin()){
-        Serial.println("Card Mount Failed");
-    }
-  } 
-}
