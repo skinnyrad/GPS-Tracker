@@ -29,4 +29,14 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 - 3V3 --- VCC
 - GND --- GND
 
+## Libraries
+Either search with the Library Manager in Arduino IDE or click the links.
+- [EspSoftwareSerial by Dirk Kaar, Peter Lerup](https://github.com/plerup/espsoftwareserial/)
+- [LittleFS_esp32 by lorol](https://github.com/lorol/LITTLEFS)
+- [TinyGPSPlus-ESP32 by Mikal Hart](https://github.com/Tinyu-Zhao/TinyGPSPlus-ESP32)
+
+## Additional boards manager URLs
+Copy this URL to the corresponding section in preferences. 
+- https://dl.espressif.com/dl/package_esp32_index.json
+(Make sure to also install this with the Board Manager; The board used by this project is named 'ESP23 Pico Kit")
 
