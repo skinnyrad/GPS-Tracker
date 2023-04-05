@@ -40,3 +40,6 @@ Copy this URL to the corresponding section in preferences.
 - https://dl.espressif.com/dl/package_esp32_index.json
 (Make sure to also install this with the Board Manager; The board used by this project is named 'ESP23 Pico Kit")
 
+## Useful Links
+- [Online GPS Visualizer](https://www.gpsvisualizer.com/)
+
