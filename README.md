@@ -40,6 +40,10 @@ Copy this URL to the corresponding section in preferences.
 - https://dl.espressif.com/dl/package_esp32_index.json
 (Make sure to also install this with the Board Manager; The board used by this project is named 'ESP23 Pico Kit")
 
-## Useful Links
-- [Online GPS Visualizer](https://www.gpsvisualizer.com/)
+## Useful Information
 
+### How To Use
+After the device is fully constructed, programmed and powered, the GPS will immediately begin recording the location data to the SD card. 
+### Mapping
+[Online GPS Visualizer](https://www.gpsvisualizer.com/)
+ - Choose the positional data file with the "Browse" button, and press "Map it"
