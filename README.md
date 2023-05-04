@@ -12,6 +12,19 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 - U: [NEO-6M GPS module](https://www.amazon.com/Microcontroller-Compatible-Sensitivity-Navigation-Positioning/dp/B07P8YMVNT?th=1)
 - S: [SparkFun microSD Transflash Breakout](https://www.sparkfun.com/products/544)
 
+## Libraries
+Either search with the Library Manager in Arduino IDE or click the links.
+- [LittleFS_esp32 by lorol](https://github.com/lorol/LITTLEFS)
+- [TinyGPSPlus-ESP32 by Mikal Hart](https://github.com/Tinyu-Zhao/TinyGPSPlus-ESP32)
+
+## Additional boards manager URLs
+Copy this URL to the corresponding section in preferences. 
+- https://dl.espressif.com/dl/package_esp32_index.json
+#
+(Make sure to also install this with the Board Manager; The board used by this project is named "ESP32 PICO-D4")
+
+## Useful Information
+
 ## Tips For Construction
 - When flashing data onto the ESP32-Pico-D4-Module, make sure that the RX0 and TX0 are not connected to anything.
 
@@ -28,20 +41,6 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 - 5 --- CS
 - 3V3 --- VCC
 - GND --- GND
-
-## Libraries
-Either search with the Library Manager in Arduino IDE or click the links.
-- [EspSoftwareSerial by Dirk Kaar, Peter Lerup](https://github.com/plerup/espsoftwareserial/)
-- [LittleFS_esp32 by lorol](https://github.com/lorol/LITTLEFS)
-- [TinyGPSPlus-ESP32 by Mikal Hart](https://github.com/Tinyu-Zhao/TinyGPSPlus-ESP32)
-
-## Additional boards manager URLs
-Copy this URL to the corresponding section in preferences. 
-- https://dl.espressif.com/dl/package_esp32_index.json
-#
-(Make sure to also install this with the Board Manager; The board used by this project is named "ESP32 PICO-D4")
-
-## Useful Information
 
 ### How To Use
 After the device is fully constructed, programmed and powered, the GPS will immediately begin recording the location data to the SD card. 
