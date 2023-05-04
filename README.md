@@ -12,6 +12,20 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 - U: [NEO-6M GPS module](https://www.amazon.com/Microcontroller-Compatible-Sensitivity-Navigation-Positioning/dp/B07P8YMVNT?th=1)
 - S: [SparkFun microSD Transflash Breakout](https://www.sparkfun.com/products/544)
 
+## Wiring
+### ESP32 --- NEO-6M:
+- TX0 --- RXD
+- RX0 --- TXD
+- 5v --- VCC
+- GND --- GND
+### ESP32 --- SparkFun microSD:
+- 19 --- DO
+- 23 --- DI
+- 18 --- SCK
+- 5 --- CS
+- 3V3 --- VCC
+- GND --- GND
+
 ## Libraries
 Either search with the Library Manager in Arduino IDE or click the links.
 - [LittleFS_esp32 by lorol](https://github.com/lorol/LITTLEFS)
@@ -27,20 +41,6 @@ Copy this URL to the corresponding section in preferences.
 
 ## Tips For Construction
 - When flashing data onto the ESP32-Pico-D4-Module, make sure that the RX0 and TX0 are not connected to anything.
-
-## Wiring
-### ESP32 --- NEO-6M:
-- TX0 --- RXD
-- RX0 --- TXD
-- 5v --- VCC
-- GND --- GND
-### ESP32 --- SparkFun microSD:
-- 19 --- DO
-- 23 --- DI
-- 18 --- SCK
-- 5 --- CS
-- 3V3 --- VCC
-- GND --- GND
 
 ### How To Use
 After the device is fully constructed, programmed and powered, the GPS will immediately begin recording the location data to the SD card. 
