@@ -7,11 +7,12 @@ The GPS-Tracker is an extremely simple GPS device that records its current posit
 ![IMG_20230114_194207_hdr](https://github.com/skinnyrad/GPS-Tracker/assets/124194193/3aa2e711-0c32-4537-a465-d7b46b087908)
 
 ## Schematic
-![GPS2SCHEME](https://github.com/skinnyrad/GPS-Tracker/assets/124194193/9eda6906-71f8-44f7-852c-c0fd8385bc26)
+![GPS2SCHEME](https://github.com/skinnyrad/GPS-Tracker/assets/124194193/deae6b5a-c06b-48c5-8d0b-8463480b0e51)
+
 ## Bill of Materials
-- E: [ESP32-Pico-D4-Module](https://www.amazon.com/RCmall-ESP32-PICO-KIT-Development-ESP32-PICO-D4-Module/dp/B09WDQYDJD?th=1)
-- G: [NEO-6M GPS module](https://www.amazon.com/Microcontroller-Compatible-Sensitivity-Navigation-Positioning/dp/B07P8YMVNT?th=1)
-- S: [SparkFun microSD Transflash Breakout](https://www.sparkfun.com/products/544)
+- E1: [ESP32-Pico-D4-Module](https://www.amazon.com/RCmall-ESP32-PICO-KIT-Development-ESP32-PICO-D4-Module/dp/B09WDQYDJD?th=1)
+- G1: [NEO-6M GPS module](https://www.amazon.com/Microcontroller-Compatible-Sensitivity-Navigation-Positioning/dp/B07P8YMVNT?th=1)
+- S1: [SparkFun microSD Transflash Breakout](https://www.sparkfun.com/products/544)
 
 ## Wiring
 ### ESP32 --- NEO-6M:
